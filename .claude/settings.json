@@ -3,5 +3,29 @@
   "effortLevel": "high",
   "permissions": {
     "allow": ["read", "write", "exec", "git", "list"]
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -Command \"Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('Claude Code needs your input','Claude Code')\""
+          }
+        ]
+      }
+    ],
+    "TaskCompleted": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -Command \"if (Test-Path package.json) { npm run lint 2>$null; npm run typecheck 2>$null }\""
+          }
+        ]
+      }
+    ]
   }
 }
