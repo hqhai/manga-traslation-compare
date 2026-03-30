@@ -1,0 +1,26 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.minimax.io/anthropic",
+    "ANTHROPIC_AUTH_TOKEN": "sk-cp-h0WrWXYlppdbXEsBkbugbWlSv9Vm5qQuqmMJsCHSutZ8JAXO64Ebu3o9bDkfcrgpF5aOGKI7893X4YNEbaksIZX4_qbBATJgM8HRsNEWDd_ikgryOYNLBmk",
+    "API_TIMEOUT_MS": "3000000",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "ANTHROPIC_MODEL": "MiniMax-M2.7",
+    "ANTHROPIC_SMALL_FAST_MODEL": "MiniMax-M2.7",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "MiniMax-M2.7",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "MiniMax-M2.7",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "MiniMax-M2.7"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(dotnet build:*)",
+      "Bash(taskkill:*)",
+      "Bash(powershell:*)",
+      "Bash(dir:*)",
+      "Bash(del:*)",
+      "Bash(git config:*)",
+      "Bash(git init:*)",
+      "Bash(git add .)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
